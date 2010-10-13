@@ -1,4 +1,4 @@
-#+TITLE:     Parts of speech tagger
+#+TITLE:     PyTagger: A python part of speech tagger.
 #+AUTHOR:    Alex Henning
 #+EMAIL:     elcron@gmail.com
 #+DATE:      2010-10-11 Mon
@@ -6,7 +6,7 @@
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:t pri:nil tags:not-in-toc
 
 * About
-This is a parts of speech tagger
+This is a parts of speech tagger. It tags the part of speech for all words in sentence. It uses [[http://en.wikipedia.org/wiki/Brill_tagger][Brill's Tagging method]] based of [[http://code.google.com/p/jspos/][jspos]].
 
 * Parts of speech
  - =CC= :: Coord Conjuncn: and,but,or
@@ -53,3 +53,49 @@ This is a parts of speech tagger
  - " :: quote:  "
  - =(= :: Left paren: =(=
  - =)= :: Right paren:  =)=
+
+* Examples
+** Madlibs
+*** About
+This is an implementations of madlibs that takes any text and makes it runnable as a madlibs game using pytagger.
+*** Examples
+: $ python madlib.py
+: 
+: Please give me a plural noun. Cats
+: Please give me a noun. EMACS
+: Please give me an adverb. tastily
+: Please give me a verb. think
+: 
+: Cats are often surprised , somtimes astounded at the EMACS he
+: excersized . He could run , walk , sleep and tastily think !
+
+: $ python madlib.py
+: 
+: Please give me a proper noun. EMACS
+: Please give me a noun. athena
+: Please give me an adverb. incompetently
+: Please give me a prepostition. beneath
+: Please give me a noun. someone
+: Please give me an adjective. purple
+: Please give me a plural noun. gods
+: Please give me an adjective. stupid
+: Please give me a prepostition. on top of
+: Please give me a noun. Cylons
+: 
+: The Cylon EMACS is long over athena yet we must not forget the
+: reasons why incompetently many sacrificed so much in the cause
+: beneath freedom . The cost of wearing the someone can be purple
+: .. . [after looking at crowd] but sometimes gods too high.
+: 
+: You know , when we fought the Cylons , we did it to save
+: ourselves from extinction . But we never answered the question
+: , why ? Why are we as a people stupid saving ? We still commit
+: murder because of greed , spite , jealousy . And we still visit
+: all of our sins upon our children . We refuse to accept the
+: responsibility for anything on top of we've done . Like we did
+: with the Cylons . We decided to play God , create life . When
+: that life turned against us , we comforted ourselves in the
+: knowledge that it really wasn't our fault , not really . You
+: cannot play God then Cylons your hands of the things that
+: you've created . Sooner or later , the day comes when you can't
+: hide from the things that you've done anymore .

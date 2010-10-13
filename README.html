@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="iso-8859-1"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
 lang="en" xml:lang="en">
 <head>
-<title>Parts of speech tagger</title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>PyTagger: A python part of speech tagger.</title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
 <meta name="generator" content="Org-mode"/>
 <meta name="generated" content="2010-10-11 Mon"/>
 <meta name="author" content="Alex Henning"/>
@@ -71,14 +71,14 @@ lang="en" xml:lang="en">
 <body>
 <div id="content">
 
-<h1 class="title">Parts of speech tagger</h1>
+<h1 class="title">PyTagger: A python part of speech tagger.</h1>
 
 
 <div id="outline-container-1" class="outline-2">
 <h2 id="sec-1">About </h2>
 <div class="outline-text-2" id="text-1">
 
-<p>This is a parts of speech tagger
+<p>This is a parts of speech tagger. It tags the part of speech for all words in sentence. It uses <a href="http://en.wikipedia.org/wiki/Brill_tagger">Brill's Tagging method</a> based of <a href="http://code.google.com/p/jspos/">jspos</a>.
 </p>
 </div>
 
@@ -220,8 +220,88 @@ Left paren: <code>(</code>
 </dd>
 <dt><code>)</code></dt><dd>
 Right paren:  <code>)</code>
+
 </dd>
 </dl>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">Examples </h2>
+<div class="outline-text-2" id="text-3">
+
+
+</div>
+
+<div id="outline-container-3_1" class="outline-3">
+<h3 id="sec-3_1">Madlibs </h3>
+<div class="outline-text-3" id="text-3_1">
+
+
+</div>
+
+<div id="outline-container-3_1_1" class="outline-4">
+<h4 id="sec-3_1_1">About </h4>
+<div class="outline-text-4" id="text-3_1_1">
+
+<p>This is an implementations of madlibs that takes any text and makes it runnable as a madlibs game using pytagger.
+</p></div>
+
+</div>
+
+<div id="outline-container-3_1_2" class="outline-4">
+<h4 id="sec-3_1_2">Examples </h4>
+<div class="outline-text-4" id="text-3_1_2">
+
+<pre class="example">
+$ python madlib.py
+
+Please give me a plural noun. Cats
+Please give me a noun. EMACS
+Please give me an adverb. tastily
+Please give me a verb. think
+
+Cats are often surprised , somtimes astounded at the EMACS he
+excersized . He could run , walk , sleep and tastily think !
+</pre>
+
+
+<pre class="example">
+$ python madlib.py
+
+Please give me a proper noun. EMACS
+Please give me a noun. athena
+Please give me an adverb. incompetently
+Please give me a prepostition. beneath
+Please give me a noun. someone
+Please give me an adjective. purple
+Please give me a plural noun. gods
+Please give me an adjective. stupid
+Please give me a prepostition. on top of
+Please give me a noun. Cylons
+
+The Cylon EMACS is long over athena yet we must not forget the
+reasons why incompetently many sacrificed so much in the cause
+beneath freedom . The cost of wearing the someone can be purple
+.. . [after looking at crowd] but sometimes gods too high.
+
+You know , when we fought the Cylons , we did it to save
+ourselves from extinction . But we never answered the question
+, why ? Why are we as a people stupid saving ? We still commit
+murder because of greed , spite , jealousy . And we still visit
+all of our sins upon our children . We refuse to accept the
+responsibility for anything on top of we've done . Like we did
+with the Cylons . We decided to play God , create life . When
+that life turned against us , we comforted ourselves in the
+knowledge that it really wasn't our fault , not really . You
+cannot play God then Cylons your hands of the things that
+you've created . Sooner or later , the day comes when you can't
+hide from the things that you've done anymore .
+</pre>
+
+</div>
+</div>
 </div>
 </div>
 <div id="postamble">
