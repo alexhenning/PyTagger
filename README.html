@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en" xml:lang="en">
+<head>
+<title>Parts of speech tagger</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2010-10-11 Mon"/>
+<meta name="author" content="Alex Henning"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+
+<h1 class="title">Parts of speech tagger</h1>
+
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">About </h2>
+<div class="outline-text-2" id="text-1">
+
+<p>This is a parts of speech tagger
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">Parts of speech </h2>
+<div class="outline-text-2" id="text-2">
+
+<dl>
+<dt><code>CC</code></dt><dd>
+Coord Conjuncn: and,but,or
+</dd>
+<dt><code>CD</code></dt><dd>
+Cardinal number: one,two
+</dd>
+<dt><code>DT</code></dt><dd>
+Determiner: the,some
+</dd>
+<dt><code>EX</code></dt><dd>
+Existential there: there
+</dd>
+<dt><code>FW</code></dt><dd>
+Foreign Word: mon dieu
+</dd>
+<dt><code>IN</code></dt><dd>
+Preposition: of,in,by
+</dd>
+<dt><code>JJ</code></dt><dd>
+Adjective: big
+</dd>
+<dt><code>JJR</code></dt><dd>
+Adj., comparative: bigger
+</dd>
+<dt><code>JJS</code></dt><dd>
+Adj., superlative: biggest
+</dd>
+<dt><code>LS</code></dt><dd>
+List item marker: 1,One
+</dd>
+<dt><code>MD</code></dt><dd>
+Modal: can,should
+</dd>
+<dt><code>NN</code></dt><dd>
+Noun, sing. or mass: dog
+</dd>
+<dt><code>NNP</code></dt><dd>
+Proper noun, sing: Edinburgh
+</dd>
+<dt><code>NNPS</code></dt><dd>
+Proper noun, plural: Smiths
+</dd>
+<dt><code>NNS</code></dt><dd>
+Noun, plural: dogs
+</dd>
+<dt><code>POS</code></dt><dd>
+Possessive ending: 's
+</dd>
+<dt><code>PDT</code></dt><dd>
+Predeterminer: all, both
+</dd>
+<dt><code>PP$</code></dt><dd>
+Possessive pronoun: my,one's
+</dd>
+<dt><code>PRP</code></dt><dd>
+Personal pronoun: I,you,she
+</dd>
+<dt><code>RB</code></dt><dd>
+Adverb: quickly
+</dd>
+<dt><code>RBR</code></dt><dd>
+Adverb, comparative: faster
+</dd>
+<dt><code>RBS</code></dt><dd>
+Adverb, superlative: fastest
+</dd>
+<dt><code>RP</code></dt><dd>
+Particle: up,off
+</dd>
+<dt><code>SYM</code></dt><dd>
+Symbol: <code>+,%,&amp;</code>
+</dd>
+<dt><code>TO</code></dt><dd>
+to: to
+</dd>
+<dt><code>UH</code></dt><dd>
+Interjection: oh, oops
+</dd>
+<dt><code>VB</code></dt><dd>
+verb, base form: eat
+</dd>
+<dt><code>VBD</code></dt><dd>
+verb, past tense: ate
+</dd>
+<dt><code>VBG</code></dt><dd>
+verb, gerund: eating
+</dd>
+<dt><code>VBN</code></dt><dd>
+verb, past part: eaten
+</dd>
+<dt><code>VBP</code></dt><dd>
+Verb, present: eat
+</dd>
+<dt><code>VBZ</code></dt><dd>
+Verb, present: eats
+</dd>
+<dt><code>WDT</code></dt><dd>
+Wh-determiner: which,that
+</dd>
+<dt><code>WP</code></dt><dd>
+Wh pronoun: who,what
+</dd>
+<dt><code>WP$</code></dt><dd>
+Possessive-Wh: whose
+</dd>
+<dt><code>WRB</code></dt><dd>
+Wh-adverb: how,where
+</dd>
+<dt>,</dt><dd>
+Comma: ,
+</dd>
+<dt><code>.</code></dt><dd>
+Sent-final punct: <code>. ! ?</code>
+</dd>
+<dt><code>:</code></dt><dd>
+Mid-sent punct: <code>: ;</code>
+</dd>
+<dt><code>$</code></dt><dd>
+Dollar sign: <code>$</code>
+</dd>
+<dt><code>#</code></dt><dd>
+Pound sign: <code>#</code>
+</dd>
+<dt>"</dt><dd>
+quote:  "
+</dd>
+<dt><code>(</code></dt><dd>
+Left paren: <code>(</code>
+</dd>
+<dt><code>)</code></dt><dd>
+Right paren:  <code>)</code>
+</dd>
+</dl>
+</div>
+</div>
+<div id="postamble">
+<p class="author"> Author: Alex Henning
+</p>
+<p class="date"> Date: 2010-10-11 Mon</p>
+<p class="creator">HTML generated by org-mode 7.01trans in emacs 23</p>
+</div>
+</div>
+</body>
+</html>
