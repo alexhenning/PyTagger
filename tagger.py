@@ -1,6 +1,6 @@
 import string, parser
 
-lexicon = parser.parse("pos.txt")
+lexicon = parser.parse("/home/alex/Dropbox/python/pos/pos.txt")
 
 def tag(words):
     tags = [None for i in words]
