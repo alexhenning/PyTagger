@@ -99,3 +99,5 @@ This is an implementations of madlibs that takes any text and makes it runnable 
 : cannot play God then Cylons your hands of the things that
 : you've created . Sooner or later , the day comes when you can't
 : hide from the things that you've done anymore .
+
+* License: WTFPL
